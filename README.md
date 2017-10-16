@@ -1,27 +1,53 @@
-# Fidash
+# FiDash
+Finance dashboard 
+* Uses Yahoo's public APIs. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3.
+# Features
+* Search for any stock symbol to view historical data, summary, and news.
+* Add and remove stock symbols to favorites.
+* Stock data refreshes every 15 seconds in the background.
+* Settings are saved to local storage.
+* Fully responsive.
 
-## Development server
+# Quick Start
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```bash
+$ git clone https://github.com/matthewdev86/fidash.git
+$ cd fidash
+$ npm install
+$ npm install -g @angular/cli
+$ ng serve
+$ Navigate to http://localhost:4200/
+```
 
-## Code scaffolding
+# Configuration
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Default application server configuration
 
-## Build
+```js
+var PORT             = 4200;
+var APP_BASE         = '/';
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Configure at runtime
 
-## Running unit tests
+```bash
+$ ng serve --host 0.0.0.0 --port 4201
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Running tests
 
-## Running end-to-end tests
+```bash
+# Development. Your app will be watched by karma
+# on each change all your specs will be executed.
+$ ng test
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# code coverage (istanbul)
+# auto-generated at the end of `npm test`
+# view coverage report:
+$ ng test -sr -cc
+```
 
-## Further help
+# License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The MIT License
